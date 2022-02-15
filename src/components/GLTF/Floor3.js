@@ -10,38 +10,93 @@ export default function Floor3({ ...props }) {
   const bakedTexture = useTexture('/textures/floor3.png')
   const { nodes, materials } = useGLTF('/models/floor3.glb')
   return (
-    <group ref={group} {...props} dispose={null} scale={[10,10,10]}>
-      <mesh geometry={nodes.Floor3_Scene.geometry}>
+    <group ref={group} {...props} dispose={null}  scale={[10,10,10]}>
+      
+      <mesh name="Floor3_Scene" geometry={nodes.Floor3_Scene.geometry}>
         <meshBasicMaterial map={bakedTexture} map-flipY={false} />
       </mesh>
-      <mesh geometry={nodes.Floor3_Black.geometry} material={nodes.Floor3_Black.material} />
-      {/* <mesh geometry={nodes.Floor3_Windows.geometry} material={nodes.Floor3_Windows.material} /> */}
-      {/* <mesh geometry={nodes.Floor3_Clickable_Home.geometry} material={nodes.Floor3_Clickable_Home.material} /> */}
-      {/* <mesh geometry={nodes.Floor3_Clickable_BlueHaze.geometry} material={nodes.Floor3_Clickable_BlueHaze.material} /> */}
-      {/* <mesh
+
+      <mesh name="Floor3_Black" geometry={nodes.Floor3_Black.geometry} material={nodes.Floor3_Black.material} />
+
+      {/* <mesh name="Floor3_Windows" geometry={nodes.Floor3_Windows.geometry} material={nodes.Floor3_Windows.material} /> */}
+
+      <mesh
+        name="Floor3_Clickable_Home"
+        geometry={nodes.Floor3_Clickable_Home.geometry}
+        >
+        <meshBasicMaterial transparent= {true} opacity= {0} color={0x73fa85} />
+      </mesh>
+
+      <mesh
+        name="Floor3_Clickable_BlueHaze"
+        geometry={nodes.Floor3_Clickable_BlueHaze.geometry}
+        >
+        <meshBasicMaterial transparent= {true} opacity= {0} color={0x73fa85} />
+      </mesh>
+
+      <mesh
+        name="Floor3_Clickable_MixedMessages"
         geometry={nodes.Floor3_Clickable_MixedMessages.geometry}
-        material={nodes.Floor3_Clickable_MixedMessages.material}
-      /> */}
-      {/* <mesh geometry={nodes.Floor3_Clickable_Lombard.geometry} material={nodes.Floor3_Clickable_Lombard.material} /> */}
-      {/* <mesh
+        >
+        <meshBasicMaterial transparent= {true} opacity= {0} color={0x73fa85} />
+      </mesh>
+
+      <mesh
+        name="Floor3_Clickable_Lombard"
+        geometry={nodes.Floor3_Clickable_Lombard.geometry}
+        >
+        <meshBasicMaterial transparent= {true} opacity= {0} color={0x73fa85} />
+      </mesh>
+
+      <mesh
+        name="Floor3_Clickable_WorldsEdge"
         geometry={nodes.Floor3_Clickable_WorldsEdge.geometry}
-        material={nodes.Floor3_Clickable_WorldsEdge.material}
-      /> */}
-      {/* <mesh
+        >
+        <meshBasicMaterial transparent= {true} opacity= {0} color={0x73fa85} />
+      </mesh>
+
+      <mesh
+        name="Floor3_Clickable_Acomplices"
         geometry={nodes.Floor3_Clickable_Acomplices.geometry}
-        material={nodes.Floor3_Clickable_Acomplices.material}
-      /> */}
-      {/* <mesh
+        >
+        <meshBasicMaterial transparent= {true} opacity= {0} color={0x73fa85} />
+      </mesh>
+
+      <mesh
+        name="Floor3_Clickable_HiddenWorlds"
         geometry={nodes.Floor3_Clickable_HiddenWorlds.geometry}
-        material={nodes.Floor3_Clickable_HiddenWorlds.material}
-      /> */}
-      {/* <mesh
+        >
+        <meshBasicMaterial transparent= {true} opacity= {0} color={0x73fa85} />
+      </mesh>
+
+      <mesh
+        name="Floor3_Clickable_Graduation"
         geometry={nodes.Floor3_Clickable_Graduation.geometry}
-        material={nodes.Floor3_Clickable_Graduation.material}
-      /> */}
-      <mesh geometry={nodes.Floor3_Black002.geometry} material={nodes.Floor3_Black002.material} />
-      {/* <mesh geometry={nodes.Floor3_Clickable_Up.geometry} material={nodes.Floor3_Clickable_Up.material} /> */}
-      {/* <mesh geometry={nodes.Floor3_Clickable_Down.geometry} material={nodes.Floor3_Clickable_Down.material} /> */}
+        >
+        <meshBasicMaterial transparent= {true} opacity= {0} color={0x73fa85} />
+      </mesh>
+      
+      <mesh
+        name="Floor3_Black002"
+        geometry={nodes.Floor3_Black002.geometry}
+        >
+        <meshBasicMaterial transparent= {true} opacity= {0} color={0x73fa85} />
+      </mesh>
+
+      <mesh
+        name="Floor3_Clickable_Up"
+        geometry={nodes.Floor3_Clickable_Up.geometry}
+        >
+        <meshBasicMaterial transparent= {true} opacity= {0} color={0x73fa85} />
+      </mesh>
+
+      <mesh
+        name="Floor3_Clickable_Down"
+        geometry={nodes.Floor3_Clickable_Down.geometry}
+        >
+        <meshBasicMaterial transparent= {true} opacity= {0} color={0x73fa85} />
+      </mesh>
+
     </group>
   )
 }
